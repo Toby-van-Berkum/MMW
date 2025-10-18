@@ -1,11 +1,13 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 
+
 function MainButton({ children }) {
   return (
     <View style={styles.buttonOuterContainer}>
       <LinearGradient
-        colors={["purple", "red", "orange"]}
+        colors={["#8A38F5", "#FF5892", "#FF8C00"]}
+        // colors={["#FF8C00", "#FF8C00"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.buttonInnerContainer}

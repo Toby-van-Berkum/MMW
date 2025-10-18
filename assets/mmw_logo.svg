@@ -1,0 +1,38 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon part -->
+  <rect x="10" y="10" width="60" height="60" rx="12" fill="url(#bgGradient)"/>
+  
+  <!-- Mini grid with checkmark -->
+  <g transform="translate(22, 22)">
+    <rect x="0" y="0" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="13" y="0" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="26" y="0" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="0" y="13" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="13" y="13" width="10" height="10" rx="2" fill="white"/>
+    <rect x="26" y="13" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="0" y="26" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="13" y="26" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    <rect x="26" y="26" width="10" height="10" rx="2" fill="white" opacity="0.6"/>
+    
+    <!-- Check in center -->
+    <path d="M15 17 L17.5 19.5 L21 15" stroke="url(#checkGradient3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="checkGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
