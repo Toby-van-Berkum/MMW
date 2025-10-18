@@ -1,10 +1,12 @@
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { useNavigation } from "@react-navigation/native";
 import MainButton from "../components/buttons/MainButton";
 import Colors from "../constants/colors";
 
 function SigninScreen() {
+  const navigation = useNavigation();
   return (
     <KeyboardAwareScrollView
       contentContainerStyle={{ flexGrow: 1 }}
@@ -55,7 +57,9 @@ function SigninScreen() {
           {/* Signup prompt */}
           <Text style={styles.signupText}>
             Don’t have an Account?{" "}
-            <Text style={styles.linkText}>Sign up</Text>
+            <TouchableOpacity onPress={() => navigation.replace("Signup")}>
+              <Text style={styles.linkText}>Sign Up</Text>
+            </TouchableOpacity>
           </Text>
         </View>
       </View>
