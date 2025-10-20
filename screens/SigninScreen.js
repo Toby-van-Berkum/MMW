@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useNavigation } from "@react-navigation/native";
 import MainButton from "../components/buttons/MainButton";
 import Colors from "../constants/colors";
+import AuthHeader from "../components/auth/AuthHeader";
+import LoginForm from "../components/auth/LoginForm";
 
 function SigninScreen() {
   const navigation = useNavigation();
@@ -15,34 +16,10 @@ function SigninScreen() {
       keyboardShouldPersistTaps="handled"
     >
       <View style={styles.container}>
-        {/* Gradient Header with Logo */}
-        <LinearGradient
-          colors={[Colors.primary500, Colors.secondary500, Colors.accent500]}
-          style={styles.headerContainer}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-        >
-          <Image
-            style={styles.imageLogo}
-            resizeMode="contain"
-            source={require("../assets/mmw_logo.png")}
-          />
-        </LinearGradient>
+        <AuthHeader headerText={"Sign In"}/>
 
-        {/* Content Section */}
         <View style={styles.content}>
-          <Text style={styles.title}>Sign in</Text>
-
-          <TextInput
-            placeholder="Email"
-            keyboardType="email-address"
-            style={styles.input}
-          />
-          <TextInput
-            placeholder="Password"
-            secureTextEntry
-            style={styles.input}
-          />
+          <LoginForm />
 
           {/* Forgot Password link */}
           <TouchableOpacity style={styles.forgotContainer}>
@@ -73,16 +50,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-  },
-  headerContainer: {
-    width: "100%",
-    height: 250,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  imageLogo: {
-    height: 120,
-    width: 120,
   },
   content: {
     flex: 1,

@@ -1,14 +1,14 @@
-// components/auth/AuthInput.js
-import { TextInput, StyleSheet } from "react-native";
+import { Text, TextInput, StyleSheet, View } from "react-native";
 
-function AuthInput({ placeholder, secureTextEntry, keyboardType = "default" }) {
+function AuthInput({ label, textInputConfig }) {
   return (
-    <TextInput
-      placeholder={placeholder}
-      secureTextEntry={secureTextEntry}
-      keyboardType={keyboardType}
-      style={styles.input}
-    />
+    <View>
+      <Text>{label}</Text>
+      <TextInput
+        {...textInputConfig}
+        style={styles.input}
+      />
+    </View>
   );
 }
 
@@ -16,7 +16,7 @@ export default AuthInput;
 
 const styles = StyleSheet.create({
   input: {
-    width: "80%",
+    width: "100%",
     borderWidth: 1,
     borderColor: "#ccc",
     padding: 10,

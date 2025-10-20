@@ -13,16 +13,14 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Signup">
+        <Stack.Navigator initialRouteName="Signup" screenOptions={{headerShown: false}}>
           <Stack.Screen 
             name="Signup" 
             component={SignupScreen} 
-            options={{ headerShown: false }}
           />
           <Stack.Screen 
             name="Signin" 
             component={SigninScreen} 
-            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer>
